@@ -1,0 +1,166 @@
+@use "variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@mixin fixedBar() {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background-color: variables.$content_bg;
+    color: var(--text);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border: 2px solid variables.$linksBar_bg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: variables.$linksBar_bg;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: #4b4a4a;
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 65px;
+    color: variables.$h1Color;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    font-size: 45px;
+    color: variables.$h1Color;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 0;
+}
+
+p {margin: 0;}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    transition: 0.3s;
+    
+    &:hover {
+        transition: 0.3s;
+        color: currentColor;
+    }
+}
+
+button:focus-visible {
+    outline: none;
+}
+
+main { 
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 77px);
+    // width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: [first] 50px [line2] 265px calc(99vw - 315px);
+    position: relative;
+}
+
+.social_sidebar {
+    @include fixedBar();
+    background-color: variables.$linksBar_bg;
+}
+
+.links_sidebar {
+    @include fixedBar();
+    background-color: variables.$sideBar_bg;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: [first] 50px [line2] calc(99vw - 50px);
+    }
+
+    section {
+        margin-bottom: 4rem;
+    }
+
+    h1 {font-size: 40px;}
+    h2 {font-size: 35px;}
+    .__subTitle {font-size: 16px;}
+    .section_subtitle {width: 100% !important;}
+}
+
+.__subTitle {
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: 200;
+}
+
+.my_btn {
+    background: variables.$btn_bg;
+    min-width: 160px;
+    height: 48px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    letter-spacing: 4px;
+    box-shadow: 0px 1px 2px rgba($color: #fff, $alpha: 0.3);
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    padding: 0 15px;
+    text-transform: uppercase;
+
+    &:hover {
+        transition: 0.3s ease-in-out;
+        box-shadow: 0px 1px 2px rgba($color: #000, $alpha: 0.9);
+        background-color: variables.$btn_active;
+    }
+}
+
+.in-mobile-view {display: none !important;}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.555);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+        z-index: 99;
+    }
+}

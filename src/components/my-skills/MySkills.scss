@@ -1,0 +1,34 @@
+.skills-container {
+    width: 100%;
+    background-color: #333333;
+    border-radius: 8px;
+    color: #ccc;
+    padding: 10px 15px;
+    box-shadow: 0px 3px 6px rgba($color: #A87C04, $alpha: 0.2);
+
+
+    img {
+        filter: grayscale(100%);
+        transition: 0.3s ease-in-out;
+        margin: 10px 10px 0 0;
+        
+        &.active, &:hover {
+            transition: 0.3s ease-in-out;
+            filter: none;
+        }
+    }
+    
+}
+
+
+.bar {
+    background: #252526;
+    width: 100%;
+    border-radius: 30px;
+    padding: 5px;
+    
+    .value {
+        height: 7px;
+        border-radius: 30px;
+    }
+}

@@ -1,0 +1,64 @@
+.splide__slide {
+
+    &.is-active {
+        .for__projectItem {
+            margin: 0 0;
+            padding: 1rem;
+            transition: 0.3s ease-in-out;
+            background-color: rgba($color: #252526, $alpha: 1);
+        } 
+    }
+}
+
+.splide__pagination {
+    bottom: -2em;
+    .splide__pagination__page {
+        &.is-active {
+            background: var(--btn-bg);
+        }
+    }
+}
+
+
+.modalTitle {
+    h4 {
+        text-transform: capitalize;
+        color: #1E1E1E;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    p {
+        color: #C60202;
+        font-size: 14px;
+    }
+}
+
+.modalBody {
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
+    }
+
+    .aboutProject {
+        .col-md-2 p {
+            font-weight: bold;
+            color: #C60202;
+        }
+        p {
+            color: #1E1E1E;
+            
+            a {
+                text-transform: capitalize;
+                transition: 0.3s;
+                text-decoration: underline;
+                &:hover {
+                    color: #C60202;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
