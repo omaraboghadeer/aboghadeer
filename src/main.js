@@ -74,7 +74,7 @@ $('.nav_link').on('click', function (e) {
 */
 var openSidebar = $('#openSidebar');
 openSidebar.on('click', function () {
-    $('body').addClass('overflow-hidden');
+    $('body').toggleClass('overflow-hidden');
     $('.overlay').toggleClass('show');
     $('.links_sidebar').toggleClass('show');
 })
