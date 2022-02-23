@@ -11,6 +11,25 @@ import toastr from "toastr"
 import MySkills from "./components/my-skills/MySkills.jsx";
 
 
+/**
+ * Menu Burger Animation
+*/
+var burger = document.querySelector('.svgburg')
+var path1 = document.querySelector('.path1')
+var path2 = document.querySelector('.path2')
+var mline = document.querySelector('.mline')
+const burgAnimation = () => {
+    burger.addEventListener('click', () => {
+        path1.classList.toggle('cross');
+        path2.classList.toggle('cross');
+        mline.classList.toggle('hide');
+    })
+
+}
+burgAnimation();
+/**
+ * END:: Menu Burger Animation
+*/
 
 /**
  * Window on scroll 
@@ -65,6 +84,9 @@ closeSidebar.on('click', function () {
     $('.overlay').removeClass('show');
     $('.links_sidebar').removeClass('show');
     $('body, .wrapper').removeClass('overflow-hidden');
+    path1.classList.toggle('cross');
+    path2.classList.toggle('cross');
+    mline.classList.toggle('hide');
 });
 
 /**

@@ -46,6 +46,24 @@ $mobile: 767px;
         font-size: 1.5rem;
         margin-bottom: 20px;
 
+        .path1, .path2{
+            stroke-dasharray: 104;
+            stroke-dashoffset: -71;
+            transition: 1s all ease;
+        }
+        .cross{
+           stroke-dashoffset: 68;
+        }
+        .mline{
+           stroke-dasharray: 41;
+           stroke-dashoffset: -82;
+           transition: 1s all ease;
+        }
+        .hide{
+           stroke-dasharray: 43;
+           stroke-dashoffset: 130;
+        }
+
         &:hover {
             color: #FFFFFF;
         }
