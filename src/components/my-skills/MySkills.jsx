@@ -1,17 +1,5 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {Component} from 'react';
 import './MySkills.scss';
-// import html5 from '../../images/skills/html5.svg';
-// import css3 from '../../images/skills/css3.svg';
-// import js from '../../images/skills/js.svg';
-// import ts from '../../images/skills/ts.svg';
-// import angular from '../../images/skills/angular.svg';
-// import react from '../../images/skills/react.svg';
-// import wepback from '../../images/skills/webpack.svg';
-// import flutter from '../../images/skills/flutter.svg';
-// import ionic from '../../images/skills/ionic.svg';
-// import nodejs from '../../images/skills/nodejs.svg';
-// import nextjs from '../../images/skills/next-js.svg';
-// import sass from '../../images/skills/sass.svg';
 
 import { Skills } from '../../../skills';
 

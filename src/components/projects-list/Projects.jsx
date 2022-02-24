@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/splide/dist/css/splide.min.css';
 import './projects.scss';
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import myProjects from '../firebase_docs';
 
 export class Projects extends Component {
