@@ -106,23 +106,6 @@ sendMsg.on('submit', function (e) {
         text: $(this)[0].elements['message'].value + "<br><br> " + $(this)[0].elements['name'].value
     };
     
-    // $.ajax({
-    //     type: $(this).attr('method'),
-    //     url: 'http://localhost:3001/send',
-    //     data: JSON.stringify(payload),
-    //     processData: false,
-    //     dataType: "json",
-    //     contentType: "text/plain",
-
-    //     beforeSend: () => {
-    //         console.log('==== beforeSend ====');
-    //     },
-    //     success: (response) => {
-    //         console.log(response);
-    //     }
-    // });
-
-
     Email.send({
         Host : "smtp.mailtrap.io",
         Username : "0c516fbf3d9b41",
@@ -141,8 +124,6 @@ sendMsg.on('submit', function (e) {
             }
         }
     )
-
-    
 });
 toastr.options = {
     "closeButton": true,
@@ -165,13 +146,10 @@ toastr.options = {
  * END:: Form "Sending Message"
 */
 
-
-
 // Top Button
 $('.top__btn').on('click', () => {
     $("html, body").animate({scrollTop: 0}, 1000);
 })
-
 
 // RENDER REACT COMPONENTS
 // 1- PROJECTS
