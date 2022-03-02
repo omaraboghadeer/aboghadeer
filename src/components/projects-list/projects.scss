@@ -37,7 +37,7 @@
 .modalBody {
     img {
         width: 100%;
-        height: 200px;
+        height: auto;
         object-fit: cover;
         box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     }
@@ -49,9 +49,10 @@
         }
         p {
             color: #1E1E1E;
+            text-transform: lowercase;
             
             a {
-                text-transform: capitalize;
+                // text-transform: capitalize;
                 transition: 0.3s;
                 text-decoration: underline;
                 &:hover {

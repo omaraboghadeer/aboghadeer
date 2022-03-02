@@ -121,16 +121,6 @@ export class Projects extends Component {
                         </Modal.Header>
                         <Modal.Body className='modalBody'>
                             <div className='container-fluid'>
-                                <div className="row mb-4">
-                                    {single_project.images.map((img, index) => (
-
-                                        <div className="col-md-4 col-12 mb-2" key={index}>
-                                            <img src={img} alt={`${single_project.name} project, img ${index}`} />
-                                        </div>
-                                        
-                                    ))}
-                                </div>
-
                                 <div className="row g-2 aboutProject">
                                     <div className="col-md-2 col-12">
                                         <p>Link: </p>
@@ -163,6 +153,16 @@ export class Projects extends Component {
                                         <p><a href={single_project.worked_in.website} target={"_blank"}>{single_project.worked_in.name}</a></p>
                                     </div>
                                 </div>
+                                <div className="row mt-4">
+                                    {single_project.images.map((img, index) => (
+
+                                        <div className="col-md-4 col-12 mb-2" key={index}>
+                                            <img src={img} alt={`${single_project.name} project, img ${index}`} />
+                                        </div>
+                                        
+                                    ))}
+                                </div>
+
                             </div>
                         </Modal.Body>
                     </Modal> :

@@ -1,5 +1,3 @@
-import "bootstrap/scss/bootstrap.scss";
-import "bootstrap/dist/js/bootstrap.js";
 import "./game/game.js";
 import "./styles/game.css";
 import "./styles/styles.scss";

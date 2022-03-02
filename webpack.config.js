@@ -59,17 +59,11 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: "asset/resource", // "resource", inline "will add it in js bundle as base64"
-                // parser: {
-                //     dataUrlCondition: {
-                //         maxSize: 1 * 1024,
-                //     }
-                // }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    //publicPath: '../fonts/',
                     filename: 'fonts/[hash][ext][query]'
                 }
             },

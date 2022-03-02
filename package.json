@@ -5,10 +5,11 @@
   "main": "main.js",
   "private": true,
   "scripts": {
+    "clean": "rm -rf dist",
     "start": "cross-env SERVE=true webpack serve --open",
     "watch": "webpack --watch",
-    "build": "rm -rf dist && cross-env NODE_ENV=production& webpack",
-    "build-dev": "rm -rf dist && webpack",
+    "build:prod": "cross-env NODE_ENV=production& webpack",
+    "build": "webpack",
     "start-server": "node src/server.js"
   },
   "keywords": [],
