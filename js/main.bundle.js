@@ -237,7 +237,7 @@ var MySkills = /*#__PURE__*/function (_Component) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
           children: "My Skills"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "d-flex justify-content-between flex-wrap",
+          className: "d-flex flex-wrap gap-3",
           children: _skills__WEBPACK_IMPORTED_MODULE_2__.Skills.map(function (skill, i) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
               onClick: function onClick() {
