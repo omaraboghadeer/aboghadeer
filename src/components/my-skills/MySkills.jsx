@@ -31,7 +31,7 @@ export class MySkills extends Component {
             <div className='skills-container'>
                 <p>My Skills</p>
                 <br />
-                <div className="d-flex justify-content-between flex-wrap">
+                <div className="d-flex flex-wrap gap-3">
                     {Skills.map((skill, i) => (
                         <div key={i} onClick={() => this._showSkillValue(skill, i)}>
                             <img src={skill.logo} alt={skill.name} className={this.state.active_skill.index == i ? 'active' : ''} />
